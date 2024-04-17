@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="{% static "CSS/main.css" %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">            
+                <div class="logo">
+                    <a href="{% url "home" %}">
+                        <img src="{% static 'img/logo.png' %}" alt="">
+                    </a>
+                    {% if user.is_authenticated %}
+                        <div class="msg_box">
+                            <h2>
+                                {{ user.username }} 님 환영합니다!!!
+                            </h2>
+                        </div>
+                    {% else %}
+                        <div class="msg_box"></div>   
+                    {% endif %}                                     
+                </div>            
+                <div>
+                    <div class="search_Bar" >
+                        <input type="search" placeholder="상품명,#해시태그,@상점명 입력" name="search" id="search">
+                        <button type="submit">검색</button>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <a href="{% url 'products:market' %}">
+                            마켓플레이스
+                        </a>
+                    </div>
+                    <div>내상점</div>
+                    <div>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'accounts:logout' %}">
+                                로그아웃
+                            </a>
+                        {% else %}
+                            <a href="{% url 'accounts:login' %}">
+                                로그인
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+{% extends "market.html" %}
+{% load static %}
+{% block navbar %}
+    <nav class="logo">
+        <a href="{% url "home" %}">
+            <img src="{% static "img/logo.png" %}" alt="로고" />
+        </a>
+        <form class="search_Bar">
+            <input
+                type="search"
+                placeholder="상품명,#해시태그,@상점명 입력"
+                name="search"
+                id="search" />
+            <button type="submit">
+                검색
+            </button>
+        </form>
+        <div class="menu">
+            <div>
+                {% if user.is_authenticated %}
+                    <a href="#">
+                        등록하기
+                    </a>
+                {% else %}
+                    <a href="{% url 'products:market' %}">
+                        마켓플레이스
+                    </a>
+                {% endif %}
+            </div>
+            <div>
+                {% if user.is_authenticated %}
+                    <a href="#">                        
+                        내 상점
+                    </a>
+                {% else %}
+                    <a href="#">                        
+                        내 상점
+                    </a>
+                {% endif %}
+            </div>
+            <div>
+                {% if user.is_authenticated %}
+                    <a href="#">
+                        로그아웃
+                    </a>
+                {% else %}
+                    <a href="#">
+                        로그인
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+  </nav>
+  <hr/>
+{% endblock navbar %}
+
+{% comment %} {% block contents %} 
+    <div class="store">
+        <div class="profile">
+            <div class="pic">
+                <img src="" alt="">            
+            </div>
+            <div class="username">
+                이름
+            </div>
+            <div class="sub">
+                나는 개똥이다
+            </div>
+        </div>
+    </div>
+{% endblock contents %} {% endcomment %}

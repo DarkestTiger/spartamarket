@@ -1,0 +1,78 @@
+
+.row {
+  width: 1500px;
+  height: 1000px;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 52%;
+}
+
+.logo img {
+  height: 100px;
+  width: 300px;
+}
+
+.msg_box {
+  position: absolute;
+}
+
+.search_Bar {
+  height: 50px;
+  display: flex;
+  border: 2px solid #E8344E;
+  border-radius: 3px;
+  position: absolute;
+  top: 40%;
+  right: 19%;
+}
+
+.search_Bar input {
+  border: none;
+  width: 500px;
+}
+
+.search_Bar button{
+  border: none;
+  background-color: #fa526c;
+  font-weight: 800;
+  color: snow;
+}
+
+.search_Bar button:hover {
+  background-color: #E8344E;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  
+  position: absolute;
+  top: 50%;
+  left: 51%;
+}
+
+.menu div {
+  margin-left: 25px;
+
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  
+  padding: 10px 10px 10px 10px;
+}
+
+.menu div a {
+  color: rgb(75, 75, 75);
+  font-weight: 700;
+  text-decoration-line: none;
+}
+
+.menu div:hover {
+  background-color: lightgray;
+}

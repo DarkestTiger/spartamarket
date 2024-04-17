@@ -1,0 +1,96 @@
+.login {
+    width: 1000px;
+    height: 800px;
+    
+    position: relative;
+    left: 20%;
+}
+
+.title img {
+    width: 400px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 30%;
+    left: 38%;
+}
+
+.login form {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.form_id {
+    margin: 30px 30px 30px 30px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.form_id input {
+    position: absolute;
+    left: 90px;
+
+    border: 2px solid #E8344E;
+    border-radius: 5px;
+
+    padding: 5px 5px 5px 5px;
+}
+
+.form_pw {
+    margin: 30px 30px 30px 30px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.form_pw input {
+    position: absolute;
+    left: 90px;
+
+    border: 2px solid #E8344E;
+    border-radius: 5px;
+
+    padding: 5px 5px 5px 5px;
+}
+
+.form_pw label {
+    position: absolute;
+    right: 30px;
+}
+
+.submit {
+    width: 300px;
+
+    position: absolute;
+    top: 170%;
+    left: 45%;
+
+    display: flex;
+    text-align: center;
+}
+
+.submit a {
+    position: absolute;
+    left: 10%;
+
+    text-decoration-line: none;
+    font-weight: 700;
+    color: #fa526c;
+
+    font-size: 18px;
+}
+
+.submit button {
+    position: absolute;
+    left: 50%;
+
+    border: 2px solid #E8344E;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+
+    font-weight: 700;
+}
