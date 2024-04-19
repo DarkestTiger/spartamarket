@@ -25,7 +25,7 @@
             placeholder="ID를 입력해주세요"
             id="username"
             name="username"
-            value="{{ form.username.value|default_if_none:'' }}" />
+            value="" />
         </div>
         <div class="form_pw">
           <label for="password"> 비밀번호 </label>
@@ -34,7 +34,7 @@
             placeholder="PW를 입력해주세요"
             id="password"
             name="password" 
-            value="{{form.password.value|default_if_none:'' }}"/>
+            value=""/>
         </div>
         <div class="submit">
           <a href="{% url 'accounts:signup' %}">회원가입</a>

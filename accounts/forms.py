@@ -7,9 +7,9 @@ from accounts.models import User
 class UserForm(UserCreationForm):
     email = forms.EmailField(label="이메일")
     profile_img = forms.ImageField(label="프로필 사진")
-    username = forms.CharField(label="아이디",required=True)
-    password1 = forms.CharField(label="비밀번호1",required=True)
-    password2 = forms.CharField(label="비밀번호2",required=True)
+    username = forms.CharField(label="아이디")
+    password1 = forms.CharField(label="비밀번호1")
+    password2 = forms.CharField(label="비밀번호2")
 
     class Meta:
         model = User
